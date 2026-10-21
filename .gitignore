@@ -1,0 +1,14 @@
+# Compilação
+target/
+*.class
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+
+# Dependências do front (usado mais adiante)
+node_modules/
+
+# Segredos: nunca versionar
+.env
