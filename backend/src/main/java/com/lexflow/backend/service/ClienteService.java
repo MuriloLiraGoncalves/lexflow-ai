@@ -16,13 +16,13 @@ public class ClienteService {
     }
 
     public Cliente cadastrar(Cliente cliente) {
-        if (repository.existePorCpf(cliente.getCpf())) {
+        if (repository.existsByCpf(cliente.getCpf())) {
             throw new IllegalArgumentException("Já existe um cliente com este CPF.");
         }
-        return repository.salvar(cliente);
+        return repository.save(cliente);
     }
 
     public List<Cliente> listar() {
-        return repository.listarTodos();
+        return repository.findAll();
     }
 }

@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: lexflow-postgres
+    environment:
+      POSTGRES_DB: lexflow
+      POSTGRES_USER: lexflow
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - lexflow_data:/var/lib/postgresql/data
+
+volumes:
+  lexflow_data:
